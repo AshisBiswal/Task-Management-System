@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        /* Navbar styles */
+        .navbar {
+            
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: top 0.3s;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: #333;
+        }
+        .navbar a.logo {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 20px;
+            color: rgb(240, 154, 168);
+        }
+        .navbar a {
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #7df3db ;
+            border-radius: 20px;
+            color: #333;
+        }
+        /* Main content styles */
+        .content {
+            padding-top: 80px; /* Adjust according to navbar height */
+            text-align: left; /* Align content to the left */
+            margin-right:200px;
+            max-width: 800px;
+            padding-left: 20px;
+            margin-top: 150px; /* Add left padding */
+        }
+        .content h1 {
+            margin-bottom: 0px;
+            
+            color: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59); /* Chrome 10-25, Safari 5.1-6 */
+           
+            font-size: 60px; /* Increase font size */
+            text-align: left; /* Align h1 to the left */
+        }
+        .get-started-btn {
+            background:  #7df3db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 15px 30px; /* Increased padding */
+            font-size: 24px; /* Increased font size */
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-right: 20px;
+            /* Add right margin */
+        }
+        .get-started-btn:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+        /* Image styles */
+        img {
+            max-width: 130%;
+            opacity: 0;
+            animation: slide-in 1s ease forwards;
+            float: right; /* Align image to the right */
+            margin-top: 150px;
+        }
+        @keyframes slide-in {
+            0% {
+                transform: translateX(100%); /* Slide in from the right */
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">Task Manager</a>
+        <div>
+
+            <a href="{% url 'register'  %}">REGISTER</a>
+            <a href="{% url 'login'  %}">LOGIN</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT</a>
+        </div>
+        
+    </nav>
+    
+   <div style="display: flex; justify-content: space-between;">
+    <div class="content">
+        <h1 >Welcome to Task Manager</h1>
+        <p style="width: 450px; margin-bottom: 30px;">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum voluptas, mollitia distinctio tempore, perferendis, nobis beatae facilis tenetur explicabo esse dolore odit incidunt. Mollitia, ea. Harum corporis quod repellendus illum."</p>
+      
+        <a href="{% url 'login'  %}" class="get-started-btn">Get Started</a>
+
+      
+    </div>
+    <div>
+        <img src="{% static 'home_image.webp'   %}" alt="">
+    </div>
+
+</div>
+    <!-- JavaScript to hide navbar on scroll down -->
+    <script>
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</body>
+</html>

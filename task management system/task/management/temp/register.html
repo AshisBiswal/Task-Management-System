@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        form {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: #dc3545;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>User Registration</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="username">Username:</label><br>
+        {{ form.username }}
+        <span class="error-message">{{ form.username.errors }}</span><br>
+
+        <label for="email">Email:</label><br>
+        {{ form.email }}
+        <span class="error-message">{{ form.email.errors }}</span><br>
+
+        <label for="password">Password:</label><br>
+        {{ form.password }}
+        <span class="error-message">{{ form.password.errors }}</span><br>
+
+        <label for="confirm_password">Confirm Password:</label><br>
+        {{ form.confirm_password }}
+        <span class="error-message">{{ form.confirm_password.errors }}</span><br>
+
+        <input type="submit" value="Register">
+    </form>
+    <p>Already have an account ..<a href="{% url 'login'  %}">login here</a></p>
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+
+</body>
+</html>
