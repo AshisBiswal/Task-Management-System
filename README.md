@@ -75,7 +75,8 @@ The Task Management System is built using Python,Django a high-level Python web 
 ![login_page](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/1f5b0dfe-ddf9-40e5-8a8e-56a69af985d1)
 ![task_page](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/dbb87698-31c7-4ac9-884f-f726842b032d)
 ![add_task](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/624bc25b-35a1-4b59-ad85-0a41bbdb66d1)
-![comment and description](https://github.com/AshisBiswal/Task-Mana
+
 ![update_task](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/ed68fbff-bb83-4bfb-8343-bd9fa2d7607d)
 gement-System/assets/113982683/1a8c50c7-37da-449f-ad1a-d8c42e64c2f5)
+![comment and description](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/53ae5cfe-7be6-4459-91a4-513f85e07b34)
 
