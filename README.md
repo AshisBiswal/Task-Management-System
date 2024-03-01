@@ -68,3 +68,14 @@ The Task Management System is built using Python,Django a high-level Python web 
 * Log in with your credentials or register for a new account if you don't have one.
 * Once logged in, you can create, view, update, and delete tasks as needed.
 * Use the comment page to discuss task details and collaborate with other users.
+
+# Screenshots
+![Home _page](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/43f29e8d-b24f-4748-87de-89287ff84536)
+![Registration-page](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/b4622a44-a1f6-487d-9625-dcc0c552c618)
+![login_page](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/1f5b0dfe-ddf9-40e5-8a8e-56a69af985d1)
+![task_page](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/dbb87698-31c7-4ac9-884f-f726842b032d)
+![add_task](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/624bc25b-35a1-4b59-ad85-0a41bbdb66d1)
+![comment and description](https://github.com/AshisBiswal/Task-Mana
+![update_task](https://github.com/AshisBiswal/Task-Management-System/assets/113982683/ed68fbff-bb83-4bfb-8343-bd9fa2d7607d)
+gement-System/assets/113982683/1a8c50c7-37da-449f-ad1a-d8c42e64c2f5)
+
